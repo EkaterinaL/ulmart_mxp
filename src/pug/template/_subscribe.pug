@@ -1,0 +1,14 @@
+section.subscribe
+        .container
+            .subscribe__page
+                .subscribe__info
+                    h2.subscribe__title Хотите быть в курсе новинок?
+                    p.subscribe__text Подпишитесь на нашу рассылку
+                form(action="" class="subscribe__form")
+                    label(for="email" required)
+                        input(type="email" name="email" placeholder="Введите ваш e-mail" class="subscribe__input")
+                    label(for="agree")
+                        input(type="checkbox" name="agree" required  checked class="subscribe__check") 
+                        span.subscribe__agree-text  Даю согласие получать рассылки от ulmart.ru
+                .subscribe__button
+                    a(href="#" class="btn btn--outline") Подписаться

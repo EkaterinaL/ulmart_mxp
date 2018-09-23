@@ -1,0 +1,51 @@
+include helpers/_mixins
+include template/_js
+block vars
+  -
+    var title = 'MicroXperts – моноблоки, офисные и игровые компьютеры, ноутбуки и серверы';
+    var description = 'MicroXperts – российский производитель моноблоков, офисных и игровых компьютеров, ноутбуков и серверных систем. Закажите сборку компьютера или скачайте драйвера на сайте MicroXperts';
+
+    var URL = "https://fast.ulmart.ru/ns/verstka/mxp/img/";
+
+    var LINK = 'https://www.ulmart.ru';
+
+    //- var SRC = 'https://fast.ulmart.ru/ns/verstka/mxp/';
+    var SRC = './';
+
+
+doctype html
+html(lang="ru")
+    head
+        include template/_head
+    body
+        include template/_header
+
+        main
+            section.promo
+                .container
+                    .promo__page
+                        .promo__product
+                            .promo__comp
+                                img(src=`${URL + 'comp.png'}` class="promo__img")
+                            .promo__information
+                                span.promo__subtitle since 1987
+                                h1.promo__title Производим оборудование
+                                span.promo__dop для ваших задач
+                    .product
+                        .product__list
+                            .product__about
+                                h2.product__title > 440&nbsp;000&nbsp;ПК
+                                p.product__text произвели в&nbsp;<nobr>Санкт-Петербурге</nobr>
+                            .product__about
+                                h2.product__title 3 года
+                                p.product__text полной гарантии
+                            .product__about
+                                h2.product__title только
+                                .product__text качественные комплектующие
+
+            include template/_category
+            include template/_tech-support
+            
+            include template/_footer
+    script(src=`${SRC + 'js/main.js'}`)
+    

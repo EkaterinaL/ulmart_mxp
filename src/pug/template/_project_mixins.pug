@@ -1,0 +1,151 @@
+-
+  var data =
+    [
+      {
+        "number": 1,
+        "title": "GPS-трекер",
+        "text": "Для поиска велосипеда в случае угона. Встроенный GPS-трекер позволит зафиксировать и отследить местоположение велосипеда.",
+        "link": "http://www.ulmart.ru/catalog/93234_21246_251878?sort=0&viewType=1&rec=true"
+      },
+      {
+        "number": 2,
+        "title": "Велокомпьютер",
+        "text": "Для отслеживания скорости, дистанции, общего пробега и времени поездки. Состоит из двух частей соединенных проводом - дисплея, который крепится на руле и датчика скорости.",
+        "link": "http://www.ulmart.ru/catalog/93234_21246_206146"
+      },
+      {
+        "number": 3,
+        "title": "Велокресло",
+        "text": "Для комфортных поездок с ребёнком. Эргономичная конструкция позволяет малышу максимально расслабиться, а заботливых родителей избавляя от лишних переживаний за его состояние.",
+        "link": "http://www.ulmart.ru/catalog/velokresla_1?sort=0&viewType=1&rec=true"
+      }
+    ]
+
+//- red\white and png\svg
+//- mixin header-logo()
+//-   .header
+//-     +a({"href":`${ROOT}`, "class":"header__logo"})
+//-       img(src=`${URL + 'ulmart-logo-red' + '.svg'}`, width="170"  alt="Ulmart")
+//-     +a({"href":`${ROOT}`, "class":"header__shop"}) Перейти к покупкам на ulmart.ru
+
+//- mixin footer()
+//-   footer.footer__wrap
+//-     .container
+//-       p.footer__text
+//-         block
+//-         |  Количество товара ограниченно. Приведённое изображение может отличаться от&nbsp;внешнего вида товара в&nbsp;центрах исполнения заказов. Существенная информация&nbsp;— на&nbsp;сайте  
+//-         +a({"href":`${ROOT}`}) ulmart.ru
+//-         |.  Категория сайта&nbsp;18+. Непубличное акционерное общество «Юлмарт», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН 1089848006423; ООО&nbsp;«Юлмарт&nbsp;РСК», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН&nbsp;1117847607900.
+
+      //- .footer__social--wrap
+      //-   +a({"href":`${ROOT}`})
+      //-     img(src=`${URL + 'ulmart-logo-red' + '.svg'}`, width="170"  alt="Ulmart")
+      //-   ul.footer__social
+      //-         <li class="footer__social--item"><a href="https://www.facebook.com/I.love.Ulmart" target="_blank">
+      //-             <svg class="footer__social--ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+      //-               <g>
+      //-                 <path d="M100.2,24.6h-13c-14.6,0-24.1,9.7-24.1,24.6v11.3h-13c-1.1,0-2.1,0.9-2.1,2.1v16.5c0,1.1,0.9,2.1,2.1,2.1h13.1v41.6c0,1.1,0.9,2.1,2.1,2.1h17.1c1.1,0,2.1-0.9,2.1-2.1V81.1h15.4c1.1,0,2.1-0.9,2.1-2.1V62.6c0-0.6-0.2-1.1-0.6-1.5s-0.9-0.6-1.5-0.6H84.3V51c0-4.6,1.1-7,7.1-7h8.8c1.1,0,2.1-0.9,2.1-2.1V26.7C102.2,25.5,101.3,24.6,100.2,24.6z"></path>
+      //-               </g>
+      //-             </svg></a></li>
+      //-         <li class="footer__social--item"><a href="https://vk.com/ulmart" target="_blank">
+      //-             <svg class="footer__social--ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+      //-               <g>
+      //-                 <path d="M126.4,100.8c-0.1-0.3-0.3-0.5-0.4-0.7c-1.9-3.4-5.5-7.5-10.7-12.4l-0.1-0.1l-0.1-0.1l-0.1-0.1h-0.1c-2.4-2.3-3.9-3.8-4.5-4.6c-1.2-1.5-1.4-3-0.8-4.5c0.4-1.2,2.2-3.6,5-7.3c1.5-2,2.7-3.6,3.7-4.7c6.5-8.6,9.3-14.1,8.4-16.5l-0.4-0.6c-0.2-0.4-0.8-0.6-1.7-0.9c-0.9-0.3-2.2-0.4-3.6-0.1l-16.2,0.1c-0.3-0.1-0.6-0.1-1.2,0c-0.5,0.1-0.7,0.1-0.7,0.1l-0.3,0.1l-0.2,0.1c-0.2,0.1-0.4,0.3-0.6,0.6s-0.4,0.6-0.6,1c-1.7,4.5-3.7,8.8-6,12.7c-1.4,2.3-2.7,4.3-3.8,6c-1.2,1.7-2.2,2.9-2.9,3.7c-0.8,0.8-1.5,1.4-2.2,1.9c-0.6,0.5-1.2,0.7-1.4,0.6C84.5,75,84.3,75,84,74.9c-0.5-0.4-0.9-0.8-1.3-1.4c-0.3-0.6-0.5-1.3-0.6-2.2C82,70.4,82,69.6,81.9,69c0-0.6,0-1.5,0-2.7c0.1-1.2,0.1-1.9,0.1-2.4c0-1.4,0-2.9,0.1-4.6s0.1-3,0.1-4c0.1-1,0.1-2,0.1-3.1s-0.1-1.9-0.2-2.6c-0.1-0.6-0.4-1.2-0.6-1.8c-0.3-0.6-0.6-1-1.2-1.4c-0.5-0.3-1.2-0.6-1.9-0.8c-2-0.4-4.5-0.7-7.6-0.7c-7-0.1-11.4,0.4-13.4,1.4c-0.8,0.4-1.5,1-2.2,1.7c-0.6,0.8-0.8,1.3-0.3,1.4c2.2,0.4,3.8,1.2,4.7,2.4l0.4,0.6c0.3,0.5,0.5,1.4,0.8,2.6c0.3,1.2,0.4,2.6,0.5,4.1c0.2,2.7,0.2,5.1,0,7s-0.4,3.5-0.5,4.5c-0.1,1.1-0.4,1.9-0.8,2.7c-0.4,0.6-0.6,1.1-0.6,1.2c-0.1,0.1-0.2,0.2-0.3,0.3c-0.5,0.2-1,0.3-1.5,0.3s-1.2-0.3-1.9-0.8s-1.5-1.2-2.3-2.2c-0.8-0.9-1.7-2.2-2.7-3.8c-1-1.7-2.1-3.6-3.2-5.8l-0.9-1.7c-0.6-1.1-1.3-2.6-2.3-4.6s-1.9-4-2.6-5.8c-0.3-0.8-0.7-1.4-1.4-1.8L40,48.7c-0.2-0.1-0.5-0.3-0.9-0.5c-0.4-0.1-0.9-0.3-1.3-0.4L22.7,48c-1.6,0-2.7,0.4-3.2,1.1l-0.2,0.4c-0.1,0.1-0.1,0.5-0.1,0.9s0.1,0.9,0.4,1.5c2.2,5.3,4.7,10.4,7.3,15.3s5,8.8,6.9,11.9c1.9,3,4,5.8,6,8.5s3.4,4.4,4,5.1s1.2,1.3,1.5,1.7l1.4,1.4c0.9,0.9,2.2,1.9,4,3.2c1.7,1.2,3.7,2.5,5.8,3.7s4.6,2.2,7.4,2.9c2.8,0.8,5.5,1.1,8.2,0.9h6.5c1.3-0.1,2.3-0.5,2.9-1.2l0.2-0.3c0.1-0.2,0.3-0.6,0.4-1c0.1-0.5,0.2-1,0.2-1.5c-0.1-1.6,0.1-3.1,0.4-4.4s0.6-2.2,0.9-2.9c0.4-0.6,0.8-1.2,1.2-1.7s0.8-0.7,0.9-0.8c0.2-0.1,0.4-0.1,0.4-0.2c0.9-0.3,1.9,0,3.2,0.9s2.4,1.9,3.5,3.2c1.1,1.3,2.4,2.7,3.8,4.4c1.5,1.6,2.8,2.8,4,3.6l1.2,0.6c0.7,0.4,1.7,0.9,2.9,1.2s2.2,0.5,3.2,0.3l14.4-0.2c1.4,0,2.5-0.2,3.3-0.7s1.2-1,1.4-1.5c0.1-0.6,0.1-1.2,0-1.9C126.7,101.6,126.5,101.1,126.4,100.8z"></path>
+      //-               </g>
+      //-             </svg></a></li>
+      //-         <li class="footer__social--item"><a href="https://twitter.com/Ulmart_ru" target="_blank">
+      //-             <svg class="footer__social--ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+      //-               <g>
+      //-                 <g>
+      //-                   <path d="M124,47.8c-3.4,1.6-7.1,2.6-10.9,3c4-2.3,7-6.1,8.4-10.5c-3.7,2.2-7.8,3.8-12.1,4.7c-3.5-3.7-8.4-6-14-6c-10.5,0-19.1,8.5-19.1,19.1c0,1.5,0.2,2.9,0.5,4.3C61,61.5,46.9,53.9,37.5,42.3c-1.6,2.8-2.6,6.1-2.6,9.6c0,6.6,3.3,12.5,8.4,15.9c-3.1-0.1-6-0.9-8.6-2.4v0.2c0,9.2,6.6,17,15.3,18.7c-1.6,0.5-3.3,0.7-5,0.7c-1.2,0-2.4-0.2-3.6-0.4c2.4,7.6,9.5,13.1,17.8,13.3c-6.5,5.1-14.7,8.1-23.7,8.1c-1.5,0-3-0.1-4.6-0.2c8.4,5.4,18.4,8.6,29.2,8.6c35.1,0,54.3-29.1,54.3-54.3l-0.1-2.5C118.2,55,121.4,51.6,124,47.8z"></path>
+      //-                 </g>
+      //-               </g>
+      //-             </svg></a></li>
+      //-         <li class="footer__social--item"><a href="https://ok.ru/iloveulmart" target="_blank">
+      //-             <svg class="footer__social--ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+      //-               <g>
+      //-                 <g>
+      //-                   <path d="M70.3,94.1c-7.6-0.8-14.6-2.7-20.5-7.3c-0.7-0.5-1.5-1.1-2.2-1.8c-2.6-2.5-2.9-5.3-0.8-8.3c1.7-2.5,4.7-3.2,7.7-1.7c0.6,0.3,1.2,0.6,1.7,1c11,7.6,26.1,7.8,37.2,0.3c1.1-0.9,2.3-1.6,3.6-1.9c2.7-0.7,5.1,0.3,6.6,2.6c1.6,2.7,1.6,5.2-0.4,7.3c-3,3.1-6.7,5.4-10.8,7c-3.9,1.5-8.1,2.3-12.3,2.7c0.6,0.7,0.9,1,1.3,1.4c5.7,5.7,11.4,11.4,17.1,17.2c1.9,1.9,2.3,4.4,1.2,6.6c-1.2,2.5-3.7,4.1-6.3,4c-1.6-0.1-2.9-0.9-4-2c-4.3-4.3-8.7-8.6-12.9-12.9c-1.2-1.2-1.8-1-2.9,0.1c-4.3,4.4-8.7,8.8-13.1,13.2c-1.9,1.9-4.4,2.3-6.6,1.2c-2.4-1.2-4-3.7-3.9-6.2c0.1-1.7,0.9-3,2.1-4.1c5.6-5.6,11.2-11.2,16.8-16.9C69.3,95,69.7,94.6,70.3,94.1z"></path>
+      //-                   <path d="M74.9,74.5c-13.6-0.1-24.8-11.4-24.7-25.1c0.1-13.8,11.3-25,25.1-25s25,11.4,24.9,25.3C100,63.4,88.7,74.5,74.9,74.5zM87.3,49.5c-0.1-6.8-5.5-12.2-12.2-12.2c-6.9,0-12.3,5.5-12.2,12.3s5.5,12.2,12.3,12.1C82,61.7,87.3,56.3,87.3,49.5z"></path>
+      //-                 </g>
+      //-               </g>
+      //-             </svg></a></li>
+      //-         <li class="footer__social--item"><a href="https://www.instagram.com/iloveulmart/" target="_blank">
+      //-             <svg class="footer__social--ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+      //-               <g>
+      //-                 <path d="M97.5,24.6H53.6c-14.9,0-27,12.1-27,27v43.8c0,14.9,12.1,27,27,27h43.8c14.9,0,27-12.1,27-27V51.6C124.5,36.7,112.3,24.6,97.5,24.6z M115.8,95.5c0,10.1-8.2,18.3-18.3,18.3H53.6c-10.1,0-18.3-8.2-18.3-18.3V51.6c0-10.1,8.2-18.3,18.3-18.3h43.8c10.1,0,18.3,8.2,18.3,18.3L115.8,95.5L115.8,95.5z"></path>
+      //-                 <path d="M75.5,48.3c-13.9,0-25.2,11.3-25.2,25.2s11.3,25.2,25.2,25.2s25.2-11.3,25.2-25.2S89.4,48.3,75.5,48.3z M75.5,90.1c-9.1,0-16.5-7.4-16.5-16.5C59,64.4,66.4,57,75.5,57S92,64.4,92,73.5C92.1,82.6,84.6,90.1,75.5,90.1z"></path>
+      //-                 <path d="M101.8,41c-1.7,0-3.3,0.7-4.5,1.9s-1.9,2.8-1.9,4.5s0.7,3.3,1.9,4.5c1.2,1.2,2.8,1.9,4.5,1.9s3.3-0.7,4.5-1.9s1.9-2.8,1.9-4.5s-0.7-3.3-1.9-4.5C105.1,41.6,103.5,41,101.8,41z"></path>
+      //-               </g>
+      //-             </svg></a></li>
+
+
+//- //- Товары
+//- mixin goods(data)
+//-     .goods-wrapper
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link", target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", width=`${data.size || '220'}`, class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | !{(data.title)}
+//-         .goods-middle
+//-             .goods-middle__price
+//-                 .goods-middle__retail
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                 .goods-middle__start
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(href=`${data.link}`, class="goods-bottom__link") Купить
+
+//- //- Товары с промокодом и выгодой
+//- mixin goods-promocode(data)
+//-     .goods-wrapper.goods-wrapper-promocode
+//-         .goods-sale
+//-             | Выгода 
+//-             br
+//-             span !{getProfit(data.oldPrice, data.price)}.- 
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link",target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | #{formatTitleAlter(data.title)}
+//-         .goods-promocode
+//-             | Промокод: 
+//-             span #{data.promocode}
+//-         .goods-middle
+//-             .goods-middle__price
+//-                 .goods-middle__retail
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                 .goods-middle__start
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(href=`${data.link}`, class="goods-bottom__link") Купить
+
+//- //- Товары для аукциона
+//- mixin goods-auction(data)
+//-     .goods-wrapper.goods-wrapper-auction
+//-         .goods-head
+//-             a(href=`${data.link}`, class="goods-head__link",target="_blank")
+//-                 img(src=`${URL + data.id + '.jpg'}`, alt="Товар", class="goods-head__img")
+//-         .goods-wrapper-name
+//-             .goods-head__name
+//-                 | !{(data.title)}
+//-         .goods-middle
+//-             .goods-middle__line
+//-                 .goods-middle__text
+//-                     | Розничная цена
+//-                 .goods-middle__retail-price
+//-                     | !{getNumberFormat(data.oldPrice)}.-
+//-                     //- | !{getProfit(data.oldPrice, data.price)}.-
+//-             .goods-middle__line
+//-                 .goods-middle__text
+//-                     | Стартовая цена
+//-                 .goods-middle__start-price
+//-                     | !{getNumberFormat(data.price)}.-
+//-         a(class="goods-bottom__link", href= `${data.link}`) О товаре
+
+
+
+//- Старая цена !{getNumberFormat(data.oldPrice)}
+//- Новая цена !{checkPriceMain(data.oldPrice, data.price)}
+//- Скидка #{getProfit(data.oldPrice,data.price)}

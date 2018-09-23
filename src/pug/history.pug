@@ -1,0 +1,113 @@
+include helpers/_mixins
+include template/_js
+block vars
+  -
+    var title = 'История MicroXperts';
+    var description = 'MicroXperts – российский производитель моноблоков, офисных и игровых компьютеров, ноутбуков и серверных систем. Закажите сборку компьютера или скачайте драйвера на сайте MicroXperts';
+
+    var URL = "https://fast.ulmart.ru/ns/verstka/mxp/img/";
+
+    var LINK = 'https://www.ulmart.ru';
+
+    var SRC = 'https://fast.ulmart.ru/ns/verstka/mxp/';
+    //- var SRC = './i/';
+
+
+
+doctype html
+html(lang="ru")
+    head
+        include template/_head
+    body
+        include template/_header
+
+        main
+            section.history
+                .history__page
+                    .container
+                        .history__content.history__content--one
+                            p.history__title 1987
+                            p.history__text В США открывается MicroXperts – компания по производству персональных компьютеров. В короткие сроки бренд становится популярным в Америке: компьютеры MicroXperts были современными, качественными и легко модернизировались. При этом свою ценовую политику молодая компания выстраивала так, чтобы десктопы могли приобрести семьи со средним достатком и начинающие предприниматели.
+                .history__page.history--bg-gray
+                    .container
+                        .history__content.history__content--two
+                            p.history__title 1993
+                            p.history__text MicroXperts переезжает в Россию. Новая штаб-квартира открывается в <nobr>Санкт-Петербурге</nobr>, и появляется одно из самых крупных производств персональных компьютеров на территории бывшего СССР. Более 15 лет MicroXperts специализируется на поставке компьютеров и готовых решений для&nbsp;муниципальных органов, вузов и крупных компаний.
+                            img(src="https://fast.ulmart.ru/ns/verstka/mxp/img/city.jpg", class="history__img", alt="")
+                .history__page
+                    .container
+                        .history__content.history__content--three
+                            p.history__title 2009
+                            p.history__text Бренд MicroXperts приобретает ЗАО «Юлмарт» – ритейлер, специализирующийся на электронике, компьютерной и бытовой технике. Начинается новый этап развития бренда. Разрабатывается новая модельная линейка персональных компьютеров с учётом потребностей разных категорий пользователей – от&nbsp;сотрудника офиса до опытного геймера.
+                .history__page.history--bg-gray
+                    .container
+                        .history__content.history__content--four
+                            p.history__title 2010
+                            .history__article
+                                p.history__text Этот год стал одним из самых важных для MicroXperts. Руководство компании вырабатывает ряд принципов, которые легли в основу производства персональных компьютеров под брендом MicroXperts: 
+                                .history__block-left
+                                    p.history__text Тестирование полного цикла для каждого устройства, на котором стоит логотип MicroXperts. Если в комплектующем обнаружена неполадка, то весь компьютер снимают с производства, и он не поступает в продажу;
+                                    p.history__text Три года гарантии на всю продукцию MicroXperts;
+                                    p.history__text Использование комплектующих только ведущих производителей. При этом также учитывается гарантийная статистика Юлмарта: если комплектующие того или иного вендора слишком часто сдают пл гарантии, то они не используются в компьютерах MicroXperts.
+                .history__page
+                    .container
+                        .history__content.history__content--five
+                            p.history__title 2011   
+                            p.history__text В феврале на должность главного инженера MicroXperts приходит Дмитрий Родионов – капитан команды по оверклокингу (процесс, направленный на достижение максимальной производительности компьютерных комплектующих) Team Russia, которая занимает первое место в мировом рейтинге. Он отвечает за разработку оптимальной конфигурации каждого устройства, выпускаемого под брендом MicroXperts. MicroXperts осваивает новые рынки: бренд активно продвигается в Москве и регионах России. По итогам года оборот компании вырос в два раза.
+                        .history__button
+                            a(href="#more" class="history__btn") Читать дальше
+                #more.history__more.visually-hidden
+                    .history__page.history--bg-gray
+                        .container        
+                            .history__content.history__content--six
+                                p.history__title 2012
+                                p.history__text В связи с ростом компании руководство принимает решение о переезде на новую производственную площадку. Благодаря этому MicroXperts смог решить важные задачи: увеличить количество и качество выпускаемой продукции и диверсифицировать производство. Сборка, тестирование, хранение комплектующих и готовой продукции MicroXperts вышли на новый уровень. В&nbsp;декабре MicroXperts и компания Юлмарт реализуют совместный проект – создают первый в Санкт-Петербурге Музей высоких технологий. Музей находится в кибермаркете Юлмарт на Кондратьевском проспекте и открыт круглосуточно, семь дней в неделю. По итогам года компания реализовала более 40&nbsp;000 персональных компьютеров – это в два раза больше, чем в 2011&nbsp;году.
+                                img(src="https://fast.ulmart.ru/ns/verstka/mxp/img/history1.png", class="history__img", alt="")
+                    .history__page
+                        .container 
+                            .history__content.history__content--seven
+                                p.history__title 2013
+                                p.history__text В модельном ряду MicroXperts появляются современные моноблоки, ультрабуки и ноутбуки. Компания первой в России создаёт полноценный суперкомпактный компьютер на базе платформы Intel NUC. Обновлена стратегия компании. Принято решение наравне с существующими принципами сосредоточиться на развитии сервисов и поддержке клиентов, а также на расширении ассортимента качественных устройств в смежных категориях компьютерной техники. В связи с этим MicroXperts проводит ребрендинг торговой марки. В новом фирменном стиле основным оттенком стал белый, что символизирует идею чистоты, технологичности и открытости бренда для своих клиентов. Логотип стал более современным и узнаваемым.
+                    .history__page.history--bg-gray
+                        .container 
+                            .history__content.history__content--eight
+                                p.history__title 2014
+                                p.history__text Cтал плодотворным годом для развития компьютеров Е-серии (Home): расширение ассортиментной линейки, вывод новых моделей, переход на новые платформы моноблоков. 
+                    .history__page
+                        .container
+                            .history__content.history__content--nine
+                                p.history__title 2015
+                                p.history__text Ведется плотная работа по росту узнаваемости бренда среди геймеров, активно взаимодействуя с популярными блогерами, такими как: Дмитрий Юрьевич Пучков (Гоблин), Константин Заруцкий (Академик), SHIMORO.
+                    .history__page.history--bg-gray
+                        .container
+                            .history__content.history__content--ten
+                                p.history__title 2016
+                                p.history__text С 2016 года запущена новая линейка игровых ПК совместно с мировым производителем комплектующих ASUS - компьютеры Powered by Asus. Осенью 2016 года Музей высоких технологий переезжает на новую площадку где количество экспонатов увеличивается в разы. Впервые в 2016 году бренд выступил техническим партнёром разработчика и локализатора компьютерных и&nbsp;консольных игр СофтКлаб на Игромире 2016.
+                                img(src="https://fast.ulmart.ru/ns/verstka/mxp/img/history2.png", class="history__img", alt="")
+                    .history__page
+                        .container
+                            .history__content.history__content--eleven
+                                p.history__title 2017 
+                                p.history__text С 2017 года производство компьютеров MicroXperts переходит на установку электронных ключей Windows по технологии Activation 3.0. 
+                                    | MicroXperts переезжает на новый объект, расположенный по адресу Муринская дор.&nbsp;24. cтр&nbsp;1.  Цель переезда – увеличение производственных площадей. 
+                                    |Осень 2017 года - участие на главной выставке года - Игромир, совместно с Intel и Cooler Master. На стенде компании Intel проходили киберспортивные соревнования на системных блоках от MicroXperts.
+
+                        
+            include template/_footer
+    script(src=`${SRC + 'js/main.js'}`)
+    script.
+        (function () {
+            var historyBtn = document.querySelector('.history__btn');
+            var btnBlock = document.querySelector('.history__button');
+            var historyMore = document.querySelector('.history__more');
+
+            var getMoreClickHandler = function() {
+                historyMore.classList.remove('visually-hidden');
+                btnBlock.classList.add('visually-hidden');
+            };
+
+            historyBtn.addEventListener('click', getMoreClickHandler);
+        })();
+    
+        
+        

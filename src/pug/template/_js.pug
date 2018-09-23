@@ -1,0 +1,94 @@
+-
+  // Отделяем тысячные
+  function getNumberFormat(data) {
+    /** @type {number} */
+    var thousands;
+    /** @type {number} */
+    var hundreds;
+    /** @type {number} */
+    var result;
+
+    if (typeof !parseInt(data) === 'NaN') {
+      // Убираем возможные пробелы
+      data = data.replace(/\s/g, '');
+
+      console.log('Here is some trouble with price ' + data);
+    }
+    // Проверка на слишком высокую цену(опечатка по цене)
+    checkPrice(data);
+    // Дробим число, чтобы поставить декоративный пробел
+    if ( ((data / 1000) < 1000) && (Math.floor(data / 1000) > 0) ) {
+       thousands = Math.floor(data / 1000);
+       hundreds = data % 1000;
+       // 1000 / 1000 = 0 => 000 etc
+       if (hundreds === 0) {
+          hundreds = '000';
+       } else if (hundreds < 10) {
+          hundreds = '00' + hundreds;
+       } else if ( (hundreds < 100) && (hundreds >= 10)) {
+          hundreds = '0' + hundreds;
+       }
+       return result = thousands + ' ' + hundreds;
+    } else if (Math.floor(data / 1000) === 0)  {
+          return data;
+    }
+      return data;
+  }
+  function checkPrice(data, borderValue){
+    borderValue = borderValue || 70000;
+    if (data > borderValue) {
+        console.log('Here some trouble with too big price ' + data);
+    }
+    return true;
+  }
+
+  // Формируем скидку в руб.\ процентах
+  function getProfit(oldPrice, price) {
+    /** @type {number} */
+    var profit;
+    var profitPercent;
+    // Убираем возможные пробелы, если передаем строку
+    isNaN(oldPrice) ? oldPrice = oldPrice.replace(/\s/g, '') : false;
+    isNaN(price) ?  price =  price.replace(/\s/g, '') : false;
+
+    // if (profit !== 'undefined') {
+    //  profit = Number(oldPrice) - Number(price);
+    //   if (profit <= 0) {
+    //     console.log('Here some trouble with profit');
+    //     return 'ERROR';
+    //   }
+    //   else {
+    //     return getNumberFormat(profit) + '.-';
+    //   }
+    // }
+
+    if (percent !== 'undefined') {
+     profitPercent =  Math.round((1 - Number(price) / Number(oldPrice)) * 100);
+      if (profitPercent <= 0) {
+        console.log('Here some trouble with profit');
+        return 'ERROR';
+      }
+      else {
+        return profitPercent + '%';
+      }
+    }
+
+  }
+
+  // Если новая цена больше старой, будет ERROR
+  function checkPriceMain(oldPrice, price) {
+    /** @type {number} */
+    var profit;
+    // Убираем возможные пробелы, если передаем строку
+    isNaN(oldPrice) ? oldPrice = oldPrice.replace(/\s/g, '') : false;
+    isNaN(price) ?  price =  price.replace(/\s/g, '') : false;
+    // Преобразование к числу и вычисление прибыли
+    profit = Number(oldPrice) - Number(price);
+
+    // Если выгода <= 0, скорее всего здесь ошибка
+    if (profit <= 0)  {
+    console.log('Here some trouble with profit');
+    return 'ERROR';
+    }
+    return getNumberFormat(price);
+  }

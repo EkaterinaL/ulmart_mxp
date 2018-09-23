@@ -1,0 +1,55 @@
+include helpers/_mixins
+include template/_js
+block vars
+  -
+    var title = 'Мероприятия MicroXperts';
+    var description = 'MicroXperts – российский производитель моноблоков, офисных и игровых компьютеров, ноутбуков и серверных систем. Закажите сборку компьютера или скачайте драйвера на сайте MicroXperts';
+
+    var URL = "https://fast.ulmart.ru/ns/verstka/mxp/img/";
+
+    var LINK = 'https://www.ulmart.ru';
+
+    var SRC = 'https://fast.ulmart.ru/ns/verstka/mxp/';
+    //- var SRC = './';
+
+
+
+doctype html
+html(lang="ru")
+    head
+        include template/_head
+    body
+        include template/_header
+
+        main
+            section.event
+                .container
+                    .event__page
+                        h1.event__title Наши Мероприятия
+                        p.event__text MicroXperts на протяжении долгих лет является партнером выставки Игромир, которая проходит в Crocus Expo в г. Москва каждый год. На стенде MicroXperts предоставляются выбор активностей, из которых: командные бои в современные 3D-шутеры, скоростные гонки с использованием профессионального оборудования, а так же посетителям предлагается в "живую" познакомится с техникой MicroXperts, поучаствовать в розыгрышах и викторинах. 
+                        .event__gallery
+                            .event__photo
+                                img(src=`${URL + 'Photo 1-1.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 4-1.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 5-1.png'}`, alt="", class="event__img")
+                            .event__photo2
+                                img(src=`${URL + 'Photo 2-1.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 3-1.png'}`, alt="", class="event__img")
+                        .event__photo3
+                            img(src=`${URL + 'Photo 6.png'}`, alt="", class="event__img")
+                            img(src=`${URL + 'Photo 7.png'}`, alt="", class="event__img")
+
+                        .event__gallery
+                            .event__photo
+                                img(src=`${URL + 'Photo 1.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 4.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 5.png'}`, alt="", class="event__img")
+                            .event__photo2   
+                                img(src=`${URL + 'Photo 2.png'}`, alt="", class="event__img")
+                                img(src=`${URL + 'Photo 3.png'}`, alt="", class="event__img")
+
+            include template/_footer
+    script(src=`${SRC + 'js/main.js'}`)
+    
+        
+        

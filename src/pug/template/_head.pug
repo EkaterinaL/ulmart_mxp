@@ -1,0 +1,33 @@
+meta(charset='utf-8')
+meta(name='viewport' content='width=device-width, initial-scale=1, minimal-ui')
+meta(http-equiv='X-UA-Compatible' content='IE=edge')
+meta(name='imagetoolbar' content='no')
+meta(name='msthemecompatible' content='no')
+meta(name='cleartype' content='on')
+meta(name='HandheldFriendly' content='True')
+meta(name='google' value='notranslate')
+meta(name='description' content=`${description}`)
+meta(name='keywords' content='')
+
+link(rel='shortcut icon' sizes='180x180' type='image/png' href=`${URL + 'apple-touch-icon.png'}`)
+link(rel='icon' type='image/png' sizes='32x32' href=`${URL + 'favicon-32x32.png'}`)
+link(rel='icon' type='image/png' sizes='16x16' href=`${URL + 'favicon-16x16.png'}`)
+
+link(href="https://fonts.googleapis.com/css?family=Montserrat:100,200i,400,500,600i,700i,800,800i,900i&amp;subset=cyrillic" rel="stylesheet")
+
+link(rel='stylesheet' type='text/css' href=`${SRC + 'css/main.css'}` media='screen, projection, print')
+title=title
+
+// Google Tag Manager
+script.
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-B5CM');
+// End Google Tag Manager
+    
+// Google Tag Manager (noscript)
+noscript
+  iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-B5CM', height='0', width='0', style='display:none;visibility:hidden')
+// End Google Tag Manager (noscript)

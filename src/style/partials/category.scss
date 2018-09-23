@@ -1,0 +1,183 @@
+.category__page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-items: flex-start;
+}
+
+.category__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    height: 295px;
+
+    &--office {
+        background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_office.jpg') 50% 50% no-repeat;
+        background-size:  cover;
+    }
+
+    &--home {
+        background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_home.jpg')  50% 50% no-repeat;
+        background-size:  cover;
+    }
+
+    &--server {
+        background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_server.jpg') 50% 50% no-repeat;
+        background-size:  cover;
+    }
+
+
+    &--game {
+        background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_game.jpg') 50% 50% no-repeat;
+        background-size:  cover;
+    }
+
+    &--monoblock {
+        background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_monoblock.jpg') 50% 50% no-repeat;
+        background-size:  cover;
+    }
+
+    &--special {
+            background-color: #e6e6e6;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/MXP_special.jpg') 50% 50% no-repeat;
+        background-size:  cover;
+    }
+}
+
+.category__about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.category__title {
+    @include text(16px, 22px, left);
+    color: $black;
+    font-weight: 500;
+}
+
+.category__text {
+    display: none;
+}
+
+.icon__arrow {
+    display: block;
+}
+
+@media (min-width: $md) {
+    .category__page {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items:center;
+        padding-bottom: 0;
+    }
+
+    .category__item {
+        padding-top: 0;
+        position: relative;
+        width: 350px;
+        height: 330px;
+
+        &:hover .category__hover {
+            position: absolute;
+            opacity: 0.9;
+            background-color: #d51908;
+            height: 330px;
+            animation: emergence 0.3s;
+        }
+    }
+
+    @keyframes emergence {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 0.9;
+        }
+    }
+
+    .category__link {
+        border: 1px solid $gray;
+    }
+
+    .category__item:hover .category__hover .category__text {
+        display: block;
+        padding-top: 30px;
+        @include text(14px, 24px, left);
+        color: $white;
+    }
+
+    .category__about {
+        flex-wrap: wrap;
+        padding-top: 10px;
+        // padding-bottom: 50px;
+    }
+    .category__title {
+        @include text(16px, 22px, left);
+        color: $black;
+        font-weight: 500;
+        width: auto;
+    }
+
+    .category__hover .category__link {
+        border: 1px solid $white;
+        display: flex;
+    }
+
+    .category__item:hover .category__hover .icon__arrow path:first-child{
+        fill: $white;
+    }
+
+    .category__item:hover .category__hover .icon__arrow path:last-child{
+        stroke: $white;
+    }
+
+    .category__item:hover .category__hover .category__title {
+        color: $white;
+    }
+}
+
+@media (min-width: $lg) {
+    .category__item {
+        width: 370px;
+        height: 390px;
+
+        &:hover .category__hover {
+            height: 390px;
+        }
+    }
+
+    .icon__arrow {
+        display: none;
+    }
+
+    .category__item:hover .category__hover .icon__arrow {
+        display: block;
+    }
+
+    .category__about {
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .category__title {
+        @include text(18px, 29px, left);
+    }
+}

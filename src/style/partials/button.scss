@@ -1,0 +1,67 @@
+
+
+.btn {
+    display: block;
+    @include text(12px, 14px, center);
+    background-color: $button;
+    color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    max-width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+
+    &--mail span:before  {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 32px;
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/envelope.svg') no-repeat;
+        background-size: 20px 14px;
+        width: 20px;
+        height: 14px;
+    }
+
+    &:hover {
+        background-color: $button-hover;
+    }
+}
+
+.btn--outline {
+    @include text(14px, 24px, center);
+    border: 1px solid  $button;
+    color: $button;
+    background-color: transparent;
+    width: 230px;
+
+    &:hover {
+        background-color: $button-hover;
+        color: $white;
+    }
+}
+
+@media (min-width: $md) {
+    .btn {
+        @include text(12px, 14px, center);
+
+        & span {
+            padding-left: 16px;
+        }
+    }
+    
+}
+
+
+@media (min-width: $lg) {
+    .btn {
+        @include text(14px, 14px, center);
+        margin : 0;
+
+        &--mail span:before {
+            top: 15px;
+            left: 20px;
+        }
+    }
+}

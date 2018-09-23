@@ -1,0 +1,131 @@
+.event__page {
+    padding: 20px 0px;
+}
+
+.event__title {
+    @include text(21px, 16px, left);
+    color: $black;
+    font-weight: bold;
+}
+
+.event__text {
+    @include text(14px, 22px, left);
+    color: $black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.event__photo, .event__photo2, .event__photo3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event__img {
+    padding-bottom: 10px;
+}
+
+@media (min-width: $md) {
+    .event__page {
+        padding: 30px 0px;
+    }
+
+    .event__title {
+        @include text(26px, 16px, left);
+        color: $black;
+        font-weight: bold;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            border: 1px solid #ec343a;
+            width: 400px;
+        }
+    }
+    
+    .event__text {
+        @include text(16px, 24px, left);
+        color: $black;
+        padding-bottom: 55px;
+        padding-top: 30px;
+    }
+
+    .event__gallery {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .event__photo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 485px;
+        padding-top: 0;
+    }
+
+    .event__img {
+        padding-bottom: 20px;
+        width: 234px;
+    }
+    
+
+    .event__photo3 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .event__photo2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .event__photo .event__img:first-child, {
+        width: 485px;
+    }
+
+    .event__photo3 .event__img:last-child {
+        width: 488px;
+    }
+}
+
+@media (min-width: $lg) {
+    .event__page {
+        padding: 50px 0px;
+    }
+
+    .event__title {
+        @include text(32px, 35px, left);
+        &:after {
+            width: 650px;
+        }
+    }
+
+    .event__text {
+        padding-top: 60px;
+        width: 740px;
+    }
+
+    .event__photo {
+        width: 770px;
+    }
+
+    .event__photo .event__img:first-child, {
+        width: 770px;
+    }
+
+    .event__photo3 .event__img:last-child {
+        width: 770px;
+    }
+
+    .event__img {
+        width: auto;
+    }
+}

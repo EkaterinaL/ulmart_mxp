@@ -1,0 +1,60 @@
+@mixin clearfix{
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after{
+        clear: both;
+    }
+}
+
+@mixin absolute__center{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+@mixin clean {
+    margin: 0;
+    padding: 0;
+}
+
+// Красивое обрезание лишнего текста
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Скрытие текста у блока
+@mixin hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+}
+
+@mixin mobile-padding{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@mixin tablet-padding{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@mixin desktop-padding{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@mixin text ($fontsize, $linegight, $align) {
+  font-size: $fontsize;
+  line-height: $linegight;
+  text-align: $align;
+}

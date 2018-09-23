@@ -1,0 +1,74 @@
+include helpers/_mixins
+include template/_js
+block vars
+  -
+    var title = 'Драйвера';
+    var description = 'MicroXperts – российский производитель моноблоков, офисных и игровых компьютеров, ноутбуков и серверных систем. Закажите сборку компьютера или скачайте драйвера на сайте MicroXperts';
+
+    var URL = "https://fast.ulmart.ru/ns/verstka/mxp/img/";
+
+    var LINK = 'https://www.ulmart.ru';
+
+    var SRC = 'https://fast.ulmart.ru/ns/verstka/mxp/';
+
+
+
+doctype html
+html(lang="ru")
+    head
+        include template/_head
+    body
+        include template/_header
+
+        main
+            section.drivers
+                .container
+                    .drivers__page
+                        h1.drivers__title Список драйверов
+
+                        .drivers__about
+                            .drivers__item
+                                h2.drivers__name Мини ПК
+                                a(href="http://d.fast.ulmart.ru/microxperts_a100_09_win7_64bit.zip") Microxperts a100-09 win7 J1800
+                                a(href="http://d.fast.ulmart.ru/microxperts_a100_09_win8_drivers.zip") Microxperts a100-09 win8 J1800
+                                a(href="http://d.fast.ulmart.ru/nettop_a100_win7.zip") Nettop a100 win7
+                                a(href="http://d.fast.ulmart.ru/nettop_a100_win8.zip") Nettop a100 win8
+                            .drivers__item
+                                h2.drivers__name Моноблок 19-24'
+                                a(href="http://d.fast.ulmart.ru/ECS_H81H3-TI2/") ECS H81H3-TI2
+                                a(href="http://d.fast.ulmart.ru/ECS_H81H3-TI2/") TH61G-S U3
+                                a(href="http://d.fast.ulmart.ru/TH81G-SA/") TH81G-SA
+                                a(href="http://d.fast.ulmart.ru/Pegatron_dq77cp.ISO") Pegatron dq77cp
+                            .drivers__item
+                                h2.drivers__name Моноблок 21.5'
+                                a(href="http://d.fast.ulmart.ru/Jumper_BLH215BW/") Jumper BLH215BW
+                                a(href="http://d.fast.ulmart.ru/M200-02.zip") M200-02
+                            .drivers__item
+                                h2.drivers__name Ультрабук 11'
+                                a(href="http://d.fast.ulmart.ru/topstar11/") Topstar 
+                            .drivers__item
+                                h2.drivers__name Ультрабук 13.3'
+                                a(href="http://d.fast.ulmart.ru/MicroXperts_U400-10,11/") MicroXperts U400-10,11
+                                a(href="http://d.fast.ulmart.ru/topstar13/") Topstar 13.3
+                                a(href="http://d.fast.ulmart.ru/u731g/") u731g
+                            .drivers__item
+                                h2.drivers__name Ультрабук 15.6'
+                                a(href="http://d.fast.ulmart.ru/topstar_TU151_15.6/") Topstar TU151 15.6 
+                            .drivers__item
+                                h2.drivers__name Ноутбук 14'
+                                a(href="http://d.fast.ulmart.ru/B34FB/") B34FB
+                                a(href="http://d.fast.ulmart.ru/Lengda_X300/") Lengda X300
+                                a(href="http://d.fast.ulmart.ru/pegatron/") B14Y
+                            .drivers__item
+                                h2.drivers__name Ноутбук 15.6'
+                                a(href="http://d.fast.ulmart.ru/A15YA_Win8.zip") A15YA
+                                a(href="http://d.fast.ulmart.ru/C15B_HD.iso") C15B HD
+                                a(href="http://d.fast.ulmart.ru/microxperts_u300_02_drivers.zip") MicroXperts u300-02
+                            .drivers__item
+                                h2.drivers__name Ноутбук 17.3'
+                                a(href="http://d.fast.ulmart.ru/A17YA/") A17YA
+
+
+            include template/_footer
+    script(src=`${SRC + 'js/main.js'}`)
+

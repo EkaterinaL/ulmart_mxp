@@ -1,0 +1,132 @@
+.team__page {
+    padding: 20px 0px;
+    
+}
+
+.team__title {
+    @include text(21px, 16px, left);
+    color: $black;
+}
+
+.team__list {
+    padding: 35px 0px;
+}
+
+.team__item {
+    margin-bottom: 30px;
+
+    & img {
+        padding-bottom: 35px;
+    }
+}
+
+.team__name {
+    @include text(18px, 20px, left);
+    color: $black;
+}
+
+.team__position {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    @include text(14px, 25px, left);
+    color: $black;
+    font-weight: 500;
+}
+
+.team__text {
+    @include text(14px, 22px, left);
+    color: #515151;
+}
+
+
+
+@media (min-width: $md) {
+    .team__page {
+        padding: 30px 0px;
+    }
+
+    .team__title {
+        @include text(26px, 16px, left);
+        color: $black;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            border: 1px solid #ec343a;
+            width: 400px;
+        }
+    }
+
+    .team__list {
+        padding: 60px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .team__item {
+        // display: flex;
+        // flex-direction: column;
+        
+        // align-items: baseline;
+        width: 355px;  
+        // height: 460px;
+
+        &:nth-child(6) .team__position {
+            padding-bottom: 46px;
+        }
+    }   
+
+    .team__name {
+        @include text(20px, 20px, left);
+    }
+    
+    .team__position {
+        @include text(16px, 25px, left);
+    }
+    
+    .team__text {
+        @include text(14px, 24px, left);
+    }
+}
+
+@media (min-width: $lg) {
+    .team__page {
+        padding: 50px 0px;
+    }
+
+    .team__title {
+        @include text(32px, 35px, left);
+        &:after {
+            width: 650px;
+        }
+    }
+
+    .team__list {
+        padding-top: 70px;
+    }
+
+    .team__item {
+        margin-bottom: 50px;
+
+        &:nth-child(4) .team__position {
+            padding-bottom: 46px;
+        }
+    } 
+
+    .team__name {
+        @include text(20px, 20px, left);
+    }
+    
+    .team__position {
+        @include text(16px, 25px, left);
+    }
+
+    .team__text {
+        @include text(14px, 24px, left);
+    }
+}

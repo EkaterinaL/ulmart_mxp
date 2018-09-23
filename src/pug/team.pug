@@ -1,0 +1,61 @@
+include helpers/_mixins
+include template/_js
+block vars
+  -
+    var title = 'Команда MicroXperts';
+    var description = 'MicroXperts – российский производитель моноблоков, офисных и игровых компьютеров, ноутбуков и серверных систем. Закажите сборку компьютера или скачайте драйвера на сайте MicroXperts';
+
+    var URL = "https://fast.ulmart.ru/ns/verstka/mxp/img/";
+
+    var LINK = 'https://www.ulmart.ru';
+
+    var SRC = 'https://fast.ulmart.ru/ns/verstka/mxp/';
+    //- var SRC = './';
+
+
+
+doctype html
+html(lang="ru")
+    head
+        include template/_head
+    body
+        include template/_header
+
+        main
+            section.team
+                .container
+                    .team__page
+                        h1.team__title Команда MicroXperts
+
+                        ul.team__list
+                            li.team__item
+                                img(src=`${URL + 'Reshetnikov.png'}`, alt="", width="150", height="150")
+                                h2.team__name Решетников Дмитрий
+                                p.team__position Руководитель направления 
+                            li.team__item
+                                img(src=`${URL + 'Maksimov.png'}`, alt="" width="150", height="150")
+                                h2.team__name Максимов Игорь
+                                p.team__position Коммерческое развитие
+                            li.team__item
+                                img(src=`${URL + 'Gurinov.png'}`, alt="" width="150", height="150")
+                                h2.team__name Гуринов Александр
+                                p.team__position Сопровождение продаж
+                            li.team__item
+                                img(src=`${URL + 'Shust.png'}`, alt="" width="150", height="150")
+                                h2.team__name Шуст Александр
+                                p.team__position Управление производством
+                            li.team__item
+                                img(src=`${URL + 'Hortov.png'}`, alt="" width="150", height="150")
+                                h2.team__name Хортов Андрей
+                                p.team__position Обеспечение логистики и&nbsp;хранения производства
+                                
+                            li.team__item
+                                img(src=`${URL + 'sherbinin.png'}`, alt="" width="150", height="150")
+                                h2.team__name Щербинин Александр
+                                p.team__position Техническое обеспечение и&nbsp;ОТК
+            
+            include template/_footer
+    script(src=`${SRC + 'js/main.js'}`)
+
+        
+        

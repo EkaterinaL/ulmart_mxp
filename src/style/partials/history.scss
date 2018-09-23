@@ -1,0 +1,216 @@
+.history__page {
+    padding: 15px 0px;
+    position: relative;
+}
+
+.history__title {
+    @include text(21px, 61px, left);
+    color: #ec343a;
+    font-weight: bold;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 45px;
+        border: 1px solid #ec343a;
+        width: 234px;
+    }
+}
+
+.history__text {
+    @include text(14px, 22px, left);
+    color: $black;
+}
+
+.history--bg-gray {
+    background-color: #f3f3f3;
+}
+
+.history__btn {
+    display: block;
+    @include text(14px, 14px, center);
+    background-color: $button;
+    color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    width: 232px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.history__button {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.history__img {
+    display: none;
+}
+
+@media (min-width: $md) {
+    .history__page {
+        padding: 0;
+    }
+
+    .history__content {
+        padding: 40px 0px;
+        position: relative;
+    }
+
+    .history__title {
+        @include text(14px, 34px, left);
+        color: $black;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            transform: rotate(-45deg);
+            top: 70px;
+            border: 1px solid #ec343a;
+            width: 90px;
+        }
+    }
+
+    .history__text {
+        padding-left: 60px;
+        @include text(14px, 20px, left);
+    }
+}
+
+@media (min-width: $lg) {
+    .history {
+        padding-bottom: 100px;
+    }
+
+    .history__content {
+        &--one,
+        &--three,
+        &--five,
+        &--seven,
+        &--nine,
+        &--eleven {
+            padding-left: 350px;
+        }
+
+        &--one {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/1987.png') no-repeat 0% 103%;
+        }
+
+        &--three {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/2009.png') no-repeat 0% 103%;
+        }
+
+        &--five {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/2011.png') no-repeat 0% 103%;
+        }
+
+        &--seven {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/2013.png') no-repeat 0% 103%;
+        }
+
+        &--nine {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/2015.png') no-repeat 0% 103%;
+        }
+
+        &--eleven {
+            background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/2017.png') no-repeat 0% 103%;
+        }
+
+        &--one .history__title:after,
+        &--three .history__title:after,
+        &--five .history__title:after,
+        &--seven .history__title:after,
+        &--nine .history__title:after,
+        &--eleven .history__title:after {
+            left: 355px;
+            top: 167px;
+        }
+
+        &--two .history__title:after,
+        &--four .history__title:after,
+        &--six .history__title:after,
+        &--eight .history__title:after,
+        &--ten .history__title:after {
+            top: 168px;
+        }
+        
+        &--two::after {
+            content: "1993";
+        }
+
+        &--four::after {
+            content: "2010";
+        }
+
+        &--six::after {
+            content: "2012";
+        }
+        
+        &--eight::after {
+            content: "2014";
+        }
+
+        &--ten::after {
+            content: "2016";
+        }
+
+        &--two::after,
+        &--four::after,
+        &--six::after,
+        &--eight::after,
+        &--ten::after {
+            position: absolute;
+            color: $white;
+            font-size: 350px;
+            line-height: 526px;
+            font-weight: bold;
+            bottom: -138px;
+            right: 0;
+            z-index: 0; 
+        }
+    }
+    
+    .history__article {
+        z-index: 10;
+        position: relative;
+        display: flex;
+
+    }
+
+    .history__block-left .history__text:nth-child(2) {
+       padding-top: 30px;
+       padding-bottom: 30px;
+    }
+
+    .history__content {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .history__title {
+        @include text(16px, 61px, left);
+    }
+
+    .history__text {
+        @include text(16px, 24px, left);
+        padding-left: 70px;
+        z-index: 20;
+        position: relative;
+        width: 700px;
+    }
+
+    .history__img {
+        display: block;
+        top: 40px;
+        right: 0px;
+        position: absolute;
+    }
+
+    .history__button {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+}

@@ -1,0 +1,104 @@
+.drivers__page {
+    padding: 20px 0px;
+    
+}
+
+.drivers__title {
+    @include text(21px, 16px, left);
+    color: $black;
+}
+
+.drivers__about {
+    padding: 35px 0px;
+}
+
+.drivers__name {
+    @include text(18px, 25px, left);
+    color: $black;
+}
+
+.drivers__item {
+    margin-bottom: 30px;
+
+    a {
+        @include text(14px, 24px, left);
+        padding-top: 10px;
+        color: $black;
+        display: block;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+}
+
+
+@media (min-width: $md) {
+    .drivers__page {
+        padding: 30px 0px;
+    }
+
+    .drivers__title {
+        @include text(26px, 36px, left);
+        color: $black;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            border: 1px solid #ec343a;
+            width: 400px;
+            width: 650px;
+        }
+    }
+
+    .drivers__about {
+        padding-top: 50px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .drivers__name {
+        @include text(20px, 20px, left);
+    }
+
+    .drivers__item {
+        margin-bottom: 30px;
+        width: 240px;
+
+        & a {
+            @include text(16px, 26px, left);
+        }
+
+        & a:hover {
+            color: #ec343a;
+        }
+    }
+    
+    
+}
+
+@media (min-width: $lg) {
+    .drivers__page {
+        padding: 50px 0px;
+    }
+
+    .drivers__title {
+        @include text(32px, 35px, left);
+        
+        &:after {
+            width: 650px;
+        }
+    }
+
+    .drivers__item {
+        margin-top: 90px;
+        width: 370px;
+    }
+
+    .drivers__name {
+        @include text(20px, 20px, left);
+    }
+}

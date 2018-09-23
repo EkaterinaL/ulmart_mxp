@@ -1,0 +1,121 @@
+.promo__product {
+    background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/1987.png') top left  no-repeat;
+    background-size: 280px 100px;
+    padding-bottom: 15px;
+}
+
+.promo__information {
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.promo__title {
+    @include text(28px, 30px, left);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.promo__dop {
+    @include text(14px, 22px, left);
+    display: block;
+    padding-top: 15px;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: 0.01em
+}
+
+.promo__subtitle {
+    position: relative;
+    top: 10px;
+   @include text(13px, 43px, left);
+   color: #c6c5c5;
+   text-transform: uppercase;
+}
+
+.promo__comp {
+    display: none;
+}
+
+@media (min-width: $md) {
+    .promo__page {
+        padding: 0px;
+    }
+
+    .promo__product {
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/1987.png') 93% 0%  no-repeat;
+        background-size: 440px 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .promo__comp {
+        display: block;
+    }
+
+    .promo__subtitle {
+        @include text(12px, 36px, left);
+        position: absolute;
+        top: -16px;
+        right: 55px;
+    }
+
+    .promo__information {
+        width: 440px;
+        padding-top: 68px;
+        padding-left: 10px;
+    }
+
+    .promo__title {
+        @include text(45px, 52px, left);
+        font-weight: 800;
+    }
+
+    .promo__dop {
+        @include text(18px, 36px, left);
+        padding-top: 30px;
+    }
+}
+
+
+@media (min-width: $lg) {
+    .promo__page {
+        padding-bottom: 58px;
+        z-index: 0;
+    }
+
+    .promo__product {
+        background: url('https://fast.ulmart.ru/ns/verstka/mxp/img/1987.png') 85% 0%  no-repeat;
+        background-size: 685px 220px;
+        padding-bottom: 20px;
+    }
+
+    .promo__comp {
+        width: 500px;
+    }
+
+    .promo__subtitle {
+        @include text(18px, 58px, left);
+        position: absolute;
+        top:-57px;
+        right: 132px;
+    }
+
+    .promo__information {
+        width: 654px;
+        padding-top: 44px;
+        padding-left: 0px;
+    }
+
+    .promo__title {
+        @include text(70px, 80px, left);
+    }
+
+    .promo__dop {
+        @include text(24px, 32px, left);
+        padding-top: 10px;
+    }
+}

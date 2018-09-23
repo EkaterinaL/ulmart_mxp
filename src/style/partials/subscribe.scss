@@ -1,0 +1,115 @@
+.subscribe__page {
+    padding-bottom: 30px;
+}
+
+.subscribe__info {
+    padding-left: 10px;
+}
+
+.subscribe__title {
+    @include text(18px, 25px, left);
+    color: #d72e1f;
+    font-weight: 500;
+}
+
+.subscribe__text {
+   @include text(14px, 24px, left);
+   color: $black;
+}
+
+.subscribe__agree-text {
+    @include text(10px, 22px, left);
+}
+
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+
+    & label:last-child {
+        padding-top: 15px;
+    }
+}
+
+.subscribe__input {
+    background-color: #f0f0f0;
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 98%;
+    outline: none;
+    border:none;
+
+    &:input-placeholder {
+        @include text(12px, 23px, left);
+    } 
+
+    &::-webkit-input-placeholder {color:#666666;}
+    &::-moz-placeholder          {color:#666666;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#666666;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#666666;}
+
+    &:focus::-webkit-input-placeholder {color: transparent}
+    &:focus::-moz-placeholder          {color: transparent}
+    &:focus:-moz-placeholder           {color: transparent}
+    &:focus:-ms-input-placeholder      {color: transparent}    
+}
+
+.subscribe__check {
+    margin-right: 10px;
+}
+
+@media (min-width: $md) {
+    .subscribe__page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .subscribe__title {
+        @include text(24px, 30px, center);
+    }
+
+    .subscribe__text {
+        padding-top: 18px;
+        @include text(16px, 26px, center);
+    }
+    
+    .subscribe__agree-text {
+        @include text(12px, 22px, left);
+    }
+
+    .subscribe__input {
+        width: 460px;
+    }
+}
+
+
+@media (min-width: $lg) {
+    .subscribe__page {
+        padding-top: 45px;
+        padding-bottom: 100px;
+        align-items: baseline;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .subscribe__info {
+        padding-left: 0;
+        width: 382px;
+    }
+
+    .subscribe__form {
+        padding: 0;
+    }
+
+    .subscribe__title {
+        @include text(24px, 30px, left);
+    }
+
+    .subscribe__text {
+        @include text(16px, 26px, left);
+        padding-top: 10px;
+    }
+}
