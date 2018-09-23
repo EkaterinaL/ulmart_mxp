@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 .idea
 *.ai
 *.log
@@ -8,4 +9,5 @@
 build/
 node_modules/
 npm-debug.log*
+package-lock.json
 Thumbs.db
